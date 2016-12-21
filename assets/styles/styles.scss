@@ -28,12 +28,18 @@ a {
 
 main {
   width: 70%;
-  margin: 0 auto;
+  margin: 3em auto 0;
+  padding-top: 2em;
+  border-top: 1px solid $body-white;
+
+  @media (min-width: 120em){ //1920px
+    width: 50%;
+  }
 }
 
 .site-header {
   text-align: center;
-  margin-bottom: 2em;
+  margin-bottom: 2em;  
 }
 
 .site-title {
@@ -42,6 +48,43 @@ main {
 
 .site-title a {
   border:none;
+}
+
+.subhead {
+  margin-bottom: 3em;
+}
+
+//item gallery thing
+.item-container {
+  // display: flex;
+  // flex-wrap: wrap;
+}
+
+.item {
+  margin: 0 0 2em;
+  padding: 0.5em;
+  // margin: 0.5em;
+  display: inline-block;
+  width: calc(33.333% - 1em);
+  // background-color: lighten($dark-bg, 40%);
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+}
+
+.item figcaption {
+  border-bottom: $body-white 1px solid;
+}
+
+.item-title {
+  font-weight: 700;
+}
+
+.item-tags {
+  text-align: right;
+  font-size: 0.8em;
 }
 
 footer {
