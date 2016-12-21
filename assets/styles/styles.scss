@@ -1,0 +1,45 @@
+@import 'base/sanitize';
+
+//variables
+$dark-bg: #1D2436;
+$body-white: #EDE6F4;
+$link-green: #F2F6DB;
+$link-yellow: #EFE4B1;
+
+body {
+  background-color: $dark-bg;
+  color: $body-white;
+  font-family: 'Cousine', monospace;
+  font-size: 110%;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: $link-yellow;
+  border-bottom: 2px solid $link-yellow;
+
+  &:hover,
+  &:focus {
+    color: $link-green;
+    border-color: $link-green;
+  }
+}
+
+main {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.site-header {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.site-title {
+  margin-bottom: 0;
+}
+
+.site-title a {
+  border:none;
+}

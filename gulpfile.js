@@ -29,7 +29,7 @@ gulp.task('styles', function(){
             }}))
         .pipe(sass())
         .pipe(autoprefixer('last 2 versions'))
-        .pipe(gulp.dest('assets/styles'))
+        .pipe(gulp.dest('dist/styles'))
         .pipe(rename({suffix: '.min'}))
         .pipe(minifycss())
         .pipe(gulp.dest('dist/styles'))
@@ -44,7 +44,7 @@ gulp.task('scripts', function(){
                 this.emit('end');
             }}))
         .pipe(concat('main.js'))
-        .pipe(gulp.dest('assets/scripts'))
+        .pipe(gulp.dest('dist/scripts'))
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
         .pipe(gulp.dest('dist/scripts'))
