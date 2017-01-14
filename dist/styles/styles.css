@@ -485,20 +485,26 @@ body {
   font-family: 'Cousine', monospace;
   font-size: 110%; }
 
+h1 {
+  color: #15dab6; }
+
 a {
   text-decoration: none;
   font-weight: 700;
-  color: #EFE4B1;
-  border-bottom: 2px solid #EFE4B1; }
+  color: #ffc410;
+  border-bottom: 2px solid #ffc410; }
   a:hover, a:focus {
-    color: #F2F6DB;
-    border-color: #F2F6DB; }
+    color: #15dab6;
+    border-color: #15dab6; }
 
 main {
-  width: 70%;
+  width: 90%;
   margin: 3em auto 0;
   padding-top: 2em;
   border-top: 1px solid #EDE6F4; }
+  @media (min-width: 52em) {
+    main {
+      width: 70%; } }
   @media (min-width: 120em) {
     main {
       width: 50%; } }
@@ -520,7 +526,13 @@ main {
   margin: 0 0 2em;
   padding: 0.5em;
   display: inline-block;
-  width: calc(33.333% - 1em); }
+  width: calc(100% - 1em); }
+  @media (min-width: 30em) {
+    .item {
+      width: calc(50% - 1em); } }
+  @media (min-width: 52em) {
+    .item {
+      width: calc(33.333% - 1em); } }
 
 .item img {
   width: 100%;

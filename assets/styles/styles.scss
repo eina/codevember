@@ -3,14 +3,18 @@
 //variables
 $dark-bg: #1D2436;
 $body-white: #EDE6F4;
-$link-green: #F2F6DB;
-$link-yellow: #EFE4B1;
+$link-green: #15dab6;
+$link-yellow: #ffc410;
 
 body {
   background-color: $dark-bg;
   color: $body-white;
   font-family: 'Cousine', monospace;
   font-size: 110%;
+}
+
+h1 {
+  color: $link-green;
 }
 
 a {
@@ -27,10 +31,14 @@ a {
 }
 
 main {
-  width: 70%;
+  width: 90%;
   margin: 3em auto 0;
   padding-top: 2em;
   border-top: 1px solid $body-white;
+
+  @media (min-width: 52em){ 
+    width: 70%;
+  }
 
   @media (min-width: 120em){ //1920px
     width: 50%;
@@ -65,8 +73,15 @@ main {
   padding: 0.5em;
   // margin: 0.5em;
   display: inline-block;
-  width: calc(33.333% - 1em);
+  width: calc(100% - 1em);
   // background-color: lighten($dark-bg, 40%);
+  @media (min-width: 30em){ 
+    width: calc(50% - 1em);
+  }
+  
+  @media (min-width: 52em){ 
+    width: calc(33.333% - 1em);
+  }
 }
 
 .item img {
