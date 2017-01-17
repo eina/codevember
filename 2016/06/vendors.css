@@ -1,0 +1,596 @@
+/*! sanitize.css v4.1.0 | CC0 License | github.com/jonathantneal/sanitize.css */
+
+/* Elements of HTML (https://html.spec.whatwg.org/multipage/semantics.html#semantics)
+   ========================================================================== */
+
+/**
+ * 1. Remove repeating backgrounds in all browsers (opinionated).
+ * 2. Add box sizing inheritence in all browsers (opinionated).
+ */
+
+*,
+::before,
+::after {
+	background-repeat: no-repeat; /* 1 */
+	box-sizing: inherit; /* 2 */
+}
+
+/**
+ * 1. Add text decoration inheritance in all browsers (opinionated).
+ * 2. Add vertical alignment inheritence in all browsers (opinionated).
+ */
+
+::before,
+::after {
+	text-decoration: inherit; /* 1 */
+	vertical-align: inherit; /* 2 */
+}
+
+/**
+ * 1. Add border box sizing in all browsers (opinionated).
+ * 2. Add the default cursor in all browsers (opinionated).
+ * 3. Add a flattened line height in all browsers (opinionated).
+ * 4. Prevent font size adjustments after orientation changes in IE and iOS.
+ */
+
+html {
+	box-sizing: border-box; /* 1 */
+	cursor: default; /* 2 */
+	font-family: sans-serif; /* 3 */
+	line-height: 1.5; /* 3 */
+	-ms-text-size-adjust: 100%; /* 4 */
+	-webkit-text-size-adjust: 100%; /* 4 */
+}
+
+/* Sections (https://html.spec.whatwg.org/multipage/semantics.html#sections)
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+	display: block;
+}
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+
+body {
+	margin: 0;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+	font-size: 2em;
+	margin: .67em 0;
+}
+
+/* Grouping content (https://html.spec.whatwg.org/multipage/semantics.html#grouping-content)
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+
+figcaption,
+figure,
+main { /* 1 */
+	display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+
+figure {
+	margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+	box-sizing: content-box; /* 1 */
+	height: 0; /* 1 */
+	overflow: visible; /* 2 */
+}
+
+/**
+ * Remove the list style on navigation lists in all browsers (opinionated).
+ */
+
+nav ol,
+nav ul {
+	list-style: none;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+	font-family: monospace, monospace; /* 1 */
+	font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics (https://html.spec.whatwg.org/multipage/semantics.html#text-level-semantics)
+   ========================================================================== */
+
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+
+a {
+	background-color: transparent; /* 1 */
+	-webkit-text-decoration-skip: objects; /* 2 */
+}
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+	border-bottom: none; /* 1 */
+	text-decoration: underline; /* 2 */
+	text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+
+b,
+strong {
+	font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+	font-family: monospace, monospace; /* 1 */
+	font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+
+dfn {
+	font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+
+mark {
+	background-color: #ffff00;
+	color: #000000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+	font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -.25em;
+}
+
+sup {
+	top: -.5em;
+}
+
+/*
+ * Remove the text shadow on text selections (opinionated).
+ * 1. Restore the coloring undone by defining the text shadow (opinionated).
+ */
+
+::-moz-selection {
+	background-color: #b3d4fc; /* 1 */
+	color: #000000; /* 1 */
+	text-shadow: none;
+}
+
+::selection {
+	background-color: #b3d4fc; /* 1 */
+	color: #000000; /* 1 */
+	text-shadow: none;
+}
+
+/* Embedded content (https://html.spec.whatwg.org/multipage/embedded-content.html#embedded-content)
+   ========================================================================== */
+
+/*
+ * Change the alignment on media elements in all browers (opinionated).
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+audio,
+video {
+	display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+
+img {
+	border-style: none;
+}
+
+/**
+ * Change the fill color to match the text color in all browsers (opinionated).
+ */
+
+svg {
+	fill: currentColor;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+/* Tabular data (https://html.spec.whatwg.org/multipage/tables.html#tables)
+   ========================================================================== */
+
+table {
+	border-collapse: collapse;
+}
+
+/* Forms (https://html.spec.whatwg.org/multipage/forms.html#forms)
+   ========================================================================== */
+
+/**
+ * Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	margin: 0;
+}
+
+/**
+ * Remove the default styling in all browsers (opinionated).
+ */
+
+button,
+input,
+select,
+textarea {
+	background-color: transparent;
+	color: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+	overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+	text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button; /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+	box-sizing: border-box; /* 1 */
+	color: inherit; /* 2 */
+	display: table; /* 1 */
+	max-width: 100%; /* 1 */
+	padding: 0; /* 3 */
+	white-space: normal; /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+	display: inline-block; /* 1 */
+	vertical-align: baseline; /* 2 */
+}
+
+/**
+ * 1. Remove the default vertical scrollbar in IE.
+ * 2. Change the resize direction on textareas in all browsers (opinionated).
+ */
+
+textarea {
+	overflow: auto; /* 1 */
+	resize: vertical; /* 2 */
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+	box-sizing: border-box; /* 1 */
+	padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+	-webkit-appearance: textfield; /* 1 */
+	outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
+}
+
+/* Interactive elements (https://html.spec.whatwg.org/multipage/forms.html#interactive-elements)
+   ========================================================================== */
+
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+
+details, /* 1 */
+menu {
+	display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+	display: list-item;
+}
+
+/* Scripting (https://html.spec.whatwg.org/multipage/scripting.html#scripting-3)
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+canvas {
+	display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+
+template {
+	display: none;
+}
+
+/* User interaction (https://html.spec.whatwg.org/multipage/interaction.html#editing)
+   ========================================================================== */
+
+/*
+ * Remove the tapping delay on clickable elements (opinionated).
+ * 1. Remove the tapping delay in IE 10.
+ */
+
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+	-ms-touch-action: manipulation; /* 1 */
+	touch-action: manipulation;
+}
+
+/**
+ * Add the correct display in IE 10-.
+ */
+
+[hidden] {
+	display: none;
+}
+
+/* ARIA in HTML (https://w3c.github.io/html-aria/)
+   ========================================================================== */
+
+/**
+ * Change the cursor on busy elements (opinionated).
+ */
+
+[aria-busy="true"] {
+	cursor: progress;
+}
+
+/*
+ * Change the cursor on control elements (opinionated).
+ */
+
+[aria-controls] {
+	cursor: pointer;
+}
+
+/*
+ * Change the display on visually hidden accessible elements (opinionated).
+ */
+
+[aria-hidden="false"][hidden] {
+	clip: rect(0, 0, 0, 0);
+	display: inherit;
+	position: absolute;
+}
+
+[aria-hidden="false"][hidden]:focus {
+	clip: auto;
+}
+
+/*
+ * Change the cursor on disabled, not-editable, or otherwise
+ * inoperable elements (opinionated).
+ */
+
+[aria-disabled] {
+	cursor: default;
+}
+
+/** CSS Gram **/
+
+.aden{position:relative;-webkit-filter:hue-rotate(-20deg) contrast(.9) saturate(.85) brightness(1.2);filter:hue-rotate(-20deg) contrast(.9) saturate(.85) brightness(1.2)}.aden:after,.aden:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.aden img{width:100%;z-index:1}.aden:before{z-index:2}.aden:after{z-index:3}.aden::after{background:-webkit-linear-gradient(left,rgba(66,10,14,.2),transparent);background:linear-gradient(to right,rgba(66,10,14,.2),transparent);mix-blend-mode:darken}.gingham::after,.perpetua::after,.reyes::after{mix-blend-mode:soft-light}.inkwell{position:relative;-webkit-filter:sepia(.3) contrast(1.1) brightness(1.1) grayscale(1);filter:sepia(.3) contrast(1.1) brightness(1.1) grayscale(1)}.inkwell:after,.inkwell:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.inkwell img{width:100%;z-index:1}.inkwell:before{z-index:2}.inkwell:after{z-index:3}.perpetua{position:relative}.perpetua:after,.perpetua:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.perpetua img{width:100%;z-index:1}.perpetua:before{z-index:2}.perpetua:after{z-index:3}.perpetua::after{background:-webkit-linear-gradient(top,#005b9a,#e6c13d);background:linear-gradient(to bottom,#005b9a,#e6c13d);opacity:.5}.reyes{position:relative;-webkit-filter:sepia(.22) brightness(1.1) contrast(.85) saturate(.75);filter:sepia(.22) brightness(1.1) contrast(.85) saturate(.75)}.reyes:after,.reyes:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.reyes img{width:100%;z-index:1}.reyes:before{z-index:2}.reyes:after{z-index:3}.reyes::after{background:#efcdad;opacity:.5}.gingham{position:relative;-webkit-filter:brightness(1.05) hue-rotate(-10deg);filter:brightness(1.05) hue-rotate(-10deg)}.gingham:after,.gingham:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.gingham img{width:100%;z-index:1}.gingham:before{z-index:2}.gingham:after{z-index:3}.gingham::after{background:#e6e6fa}.toaster{position:relative;-webkit-filter:contrast(1.5) brightness(.9);filter:contrast(1.5) brightness(.9)}.toaster:after,.toaster:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.toaster img{width:100%;z-index:1}.toaster:before{z-index:2}.toaster:after{z-index:3}.toaster::after{background:-webkit-radial-gradient(circle,#804e0f,#3b003b);background:radial-gradient(circle,#804e0f,#3b003b);mix-blend-mode:screen}.walden{position:relative;-webkit-filter:brightness(1.1) hue-rotate(-10deg) sepia(.3) saturate(1.6);filter:brightness(1.1) hue-rotate(-10deg) sepia(.3) saturate(1.6)}.walden:after,.walden:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.walden img{width:100%;z-index:1}.walden:before{z-index:2}.walden:after{z-index:3}.walden::after{background:#04c;mix-blend-mode:screen;opacity:.3}.hudson{position:relative;-webkit-filter:brightness(1.2) contrast(.9) saturate(1.1);filter:brightness(1.2) contrast(.9) saturate(1.1)}.hudson:after,.hudson:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.hudson img{width:100%;z-index:1}.hudson:before{z-index:2}.hudson:after{z-index:3}.hudson::after{background:-webkit-radial-gradient(circle,#a6b1ff 50%,#342134);background:radial-gradient(circle,#a6b1ff 50%,#342134);mix-blend-mode:multiply;opacity:.5}.earlybird{position:relative;-webkit-filter:contrast(.9) sepia(.2);filter:contrast(.9) sepia(.2)}.earlybird:after,.earlybird:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.earlybird img{width:100%;z-index:1}.earlybird:before{z-index:2}.earlybird:after{z-index:3}.earlybird::after{background:-webkit-radial-gradient(circle,#d0ba8e 20%,#360309 85%,#1d0210 100%);background:radial-gradient(circle,#d0ba8e 20%,#360309 85%,#1d0210 100%);mix-blend-mode:overlay}.mayfair{position:relative;-webkit-filter:contrast(1.1) saturate(1.1);filter:contrast(1.1) saturate(1.1)}.mayfair:after,.mayfair:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.mayfair img{width:100%;z-index:1}.mayfair:before{z-index:2}.mayfair:after{z-index:3}.mayfair::after{background:-webkit-radial-gradient(40% 40%,circle,rgba(255,255,255,.8),rgba(255,200,200,.6),#111 60%);background:radial-gradient(circle at 40% 40%,rgba(255,255,255,.8),rgba(255,200,200,.6),#111 60%);mix-blend-mode:overlay;opacity:.4}.lofi{position:relative;-webkit-filter:saturate(1.1) contrast(1.5);filter:saturate(1.1) contrast(1.5)}.lofi:after,.lofi:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.lofi img{width:100%;z-index:1}.lofi:before{z-index:2}.lofi:after{z-index:3}.lofi::after{background:-webkit-radial-gradient(circle,transparent 70%,#222 150%);background:radial-gradient(circle,transparent 70%,#222 150%);mix-blend-mode:multiply}._1977{position:relative;-webkit-filter:contrast(1.1) brightness(1.1) saturate(1.3);filter:contrast(1.1) brightness(1.1) saturate(1.3)}._1977:after,._1977:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}._1977 img{width:100%;z-index:1}._1977:before{z-index:2}._1977:after{z-index:3;background:rgba(243,106,188,.3);mix-blend-mode:screen}.brooklyn{position:relative;-webkit-filter:contrast(.9) brightness(1.1);filter:contrast(.9) brightness(1.1)}.brooklyn:after,.brooklyn:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.brooklyn img{width:100%;z-index:1}.brooklyn:before{z-index:2}.brooklyn:after{z-index:3}.brooklyn::after{background:-webkit-radial-gradient(circle,rgba(168,223,193,.4) 70%,#c4b7c8);background:radial-gradient(circle,rgba(168,223,193,.4) 70%,#c4b7c8);mix-blend-mode:overlay}.xpro2{position:relative;-webkit-filter:sepia(.3);filter:sepia(.3)}.xpro2:after,.xpro2:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.xpro2 img{width:100%;z-index:1}.xpro2:before{z-index:2}.xpro2:after{z-index:3}.xpro2::after{background:-webkit-radial-gradient(circle,#e6e7e0 40%,rgba(43,42,161,.6) 110%);background:radial-gradient(circle,#e6e7e0 40%,rgba(43,42,161,.6) 110%);mix-blend-mode:color-burn}.nashville{position:relative;-webkit-filter:sepia(.2) contrast(1.2) brightness(1.05) saturate(1.2);filter:sepia(.2) contrast(1.2) brightness(1.05) saturate(1.2)}.nashville:after,.nashville:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.nashville img{width:100%;z-index:1}.nashville:before{z-index:2}.nashville:after{z-index:3}.nashville::after{background:rgba(0,70,150,.4);mix-blend-mode:lighten}.nashville::before{background:rgba(247,176,153,.56);mix-blend-mode:darken}.lark{position:relative;-webkit-filter:contrast(.9);filter:contrast(.9)}.lark:after,.lark:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.lark img{width:100%;z-index:1}.lark:before{z-index:2}.lark:after{z-index:3}.lark::after{background:rgba(242,242,242,.8);mix-blend-mode:darken}.lark::before{background:#22253f;mix-blend-mode:color-dodge}.moon{position:relative;-webkit-filter:grayscale(1) contrast(1.1) brightness(1.1);filter:grayscale(1) contrast(1.1) brightness(1.1)}.moon:after,.moon:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.moon img{width:100%;z-index:1}.moon:before{z-index:2}.moon:after{z-index:3}.moon::before{background:#a0a0a0;mix-blend-mode:soft-light}.moon::after{background:#383838;mix-blend-mode:lighten}.clarendon{position:relative;-webkit-filter:contrast(1.2) saturate(1.35);filter:contrast(1.2) saturate(1.35)}.clarendon:after,.clarendon:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.clarendon img{width:100%;z-index:1}.clarendon:before{z-index:2;background:rgba(127,187,227,.2);mix-blend-mode:overlay}.clarendon:after{z-index:3}.willow{position:relative;-webkit-filter:grayscale(.5) contrast(.95) brightness(.9);filter:grayscale(.5) contrast(.95) brightness(.9)}.willow:after,.willow:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.willow img{width:100%;z-index:1}.willow:before{z-index:2}.willow:after{z-index:3}.willow::before{background-color:radial-gradient(40%,circle,#d4a9af 55%,#000 150%);mix-blend-mode:overlay}.willow::after{background-color:#d8cdcb;mix-blend-mode:color}.rise{position:relative;-webkit-filter:brightness(1.05) sepia(.2) contrast(.9) saturate(.9);filter:brightness(1.05) sepia(.2) contrast(.9) saturate(.9)}.rise:after,.rise:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.rise img{width:100%;z-index:1}.rise:before{z-index:2}.rise:after{z-index:3}.rise::after{background:-webkit-radial-gradient(circle,rgba(232,197,152,.8),transparent 90%);background:radial-gradient(circle,rgba(232,197,152,.8),transparent 90%);mix-blend-mode:overlay;opacity:.6}.rise::before{background:-webkit-radial-gradient(circle,rgba(236,205,169,.15) 55%,rgba(50,30,7,.4));background:radial-gradient(circle,rgba(236,205,169,.15) 55%,rgba(50,30,7,.4));mix-blend-mode:multiply}.slumber{position:relative;-webkit-filter:saturate(.66) brightness(1.05);filter:saturate(.66) brightness(1.05)}.slumber:after,.slumber:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.slumber img{width:100%;z-index:1}.slumber:before{z-index:2}.slumber:after{z-index:3}.slumber::after{background:rgba(125,105,24,.5);mix-blend-mode:soft-light}.slumber::before{background:rgba(69,41,12,.4);mix-blend-mode:lighten}.brannan{position:relative;-webkit-filter:sepia(.5) contrast(1.4);filter:sepia(.5) contrast(1.4)}.brannan:after,.brannan:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.brannan img{width:100%;z-index:1}.brannan:before{z-index:2}.brannan:after{z-index:3}.brannan::after{background-color:rgba(161,44,199,.31);mix-blend-mode:lighten}.valencia{position:relative;-webkit-filter:contrast(1.08) brightness(1.08) sepia(.08);filter:contrast(1.08) brightness(1.08) sepia(.08)}.valencia:after,.valencia:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.valencia img{width:100%;z-index:1}.valencia:before{z-index:2}.valencia:after{z-index:3}.valencia::after{background:#3a0339;mix-blend-mode:exclusion;opacity:.5}.kelvin{position:relative}.kelvin:after,.kelvin:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.kelvin img{width:100%;z-index:1}.kelvin:before{z-index:2}.kelvin:after{z-index:3}.kelvin::after{background:#b77d21;mix-blend-mode:overlay}.kelvin::before{background:#382c34;mix-blend-mode:color-dodge}.maven{position:relative;-webkit-filter:sepia(.25) brightness(.95) contrast(.95) saturate(1.5);filter:sepia(.25) brightness(.95) contrast(.95) saturate(1.5)}.maven:after,.maven:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.maven img{width:100%;z-index:1}.maven:before{z-index:2}.maven:after{z-index:3;background:rgba(3,230,26,.2);mix-blend-mode:hue}.stinson{position:relative;-webkit-filter:contrast(.75) saturate(.85) brightness(1.15);filter:contrast(.75) saturate(.85) brightness(1.15)}.stinson:after,.stinson:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}.stinson img{width:100%;z-index:1}.stinson:before{z-index:2}.stinson:after{z-index:3}.stinson::before{background:rgba(240,149,128,.2);mix-blend-mode:soft-light}

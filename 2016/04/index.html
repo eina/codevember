@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <style type="text/css">
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      html {
+        box-sizing: border-box;
+      }
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+
+      body {
+        position: relative;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      main {
+        position: relative;
+        transition: all 0.8s ease-in-out;  
+      }
+
+      main:hover {
+        background-color: rgba(0,0,0,0.9);
+      }
+
+      main:hover .top-container {
+        opacity: 1;
+      }
+
+      .bottom {
+        height: 100vh;
+        width: 100%;
+        background: url('http://i280.photobucket.com/albums/kk195/thelittleblacksmith/vancouver-nick-scheerbart%20-comp_zps8ppefiqh.jpg') no-repeat;
+        background-size: cover;
+        mix-blend-mode: lighten;
+        
+        position: absolute;
+        top: 0;
+        z-index: 10;
+      }
+
+      .bottom-container,
+      .top-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+      }
+
+      .bottom-container:after,
+      .top-container:after {
+        content: '';
+        display: block;
+        background-transparent;
+        height: calc(100vh - 2em);
+        width: calc(100vw - 2em);
+        min-width: 320px;
+        border: 1em solid black;
+        position: absolute;
+      }
+
+      @media (min-width: 52.5em){
+        .bottom-container:after,
+        .top-container:after {
+          border-width: 2em;
+          height: calc(100vh - 5em);
+          width: calc(100vw - 5em);
+        }
+      }
+
+      .bottom-container {
+        z-index: 1;
+      }
+
+      .top-container {
+        position: absolute;
+        top: 0;
+        z-index: 20;
+        opacity: 0;  
+      }
+
+      .top-container:after {
+        border-color: white;
+      }
+
+      .text {
+        font-size: 5vh;
+        font-weight: 700;
+      }
+
+      @media (min-width: 40em){
+        .text {
+          font-size: 10vh;
+        }
+      }
+
+      @media (min-width: 62em){
+        .text {
+          font-size: 15vh;
+        }
+      }
+
+      @media (min-width: 80em){
+        .text {
+          font-size: 20vh;
+        }
+      }
+
+      .top-container .text{
+        color: white;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!---
+    WON'T WORK ON IE OR EDGE, sorry =/
+    Heavily inspired by: http://codepen.io/robinsavemark/pen/YpGYYj
+    Background image from: https://unsplash.com/@nck?photo=xFjAftU8lMY
+    Tutorial: https://css-tricks.com/how-to-do-knockout-text/
+    -->
+
+    <main>
+      <div class="bottom-container">
+        <p class="text">VANCOUVER</p>
+      </div>  
+      <div class="bottom"></div>
+      <div class="top-container">
+        <p class="text">VANCOUVER</p>
+      </div> 
+    </main>
+    
+  </body>
+</html>
