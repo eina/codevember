@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/thelittleblacksmith/codvember/issues"
   },
-  "homepage": "https://github.com/thelittleblacksmith/codvember#readme"
+  "homepage": "https://github.com/thelittleblacksmith/codvember#readme",
+  "devDependencies": {
+    "gulp-imagemin": "^3.1.1"
+  }
 }

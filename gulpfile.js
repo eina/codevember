@@ -6,6 +6,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var minifycss = require('gulp-cssnano');
 var sass = require('gulp-sass');
+var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync');
 
 gulp.task('browser-sync', function() {
@@ -18,6 +19,17 @@ gulp.task('browser-sync', function() {
 
 gulp.task('bs-reload', function () {
     browserSync.reload();
+});
+
+/** Image Optimization */
+gulp.task('images', function(){
+  gulp.src('./assets/img/*.{jpg,gif,png,min}')
+      .pipe(imagemin({
+        optimizationLevel: 8,
+        progressive: true,
+        interlaced: true
+      }))
+      .pipe(gulp.dest('./dist/img'))
 });
 
 gulp.task('styles', function(){
